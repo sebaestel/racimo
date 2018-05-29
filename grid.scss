@@ -1,0 +1,98 @@
+/*
+	Layout goes in this file.
+	Layout classes should be prefixed `.l-`
+*/
+
+$breakpoint-no-mediaqueries: 1020px !default; // Not necessary if using sassyplate
+$breakpoint-large: 1200px !default; // Not necessary if using sassyplate
+$breakpoint-mid: 820px !default; // Not necessary if using sassyplate
+
+$l-gutter-body: 20px !default;
+$l-gutter-column: 10px !default;
+$l-column-count: 12 !default;
+$l-container-width: $breakpoint-large;
+$l-col-width: 100% / $l-column-count;
+
+// Optional fullwidth wrapper element
+.l-container-wrapper {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  // Clearfix
+  zoom: 1;
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+}
+
+// Grid container and column styles
+.l-container {
+  width: 100%;
+  max-width: $l-container-width + ($l-gutter-body*2);
+  box-sizing: inherit; // If not using autoprefixer, add vendor prefixes here
+  margin: 0 auto;
+  display: block;
+  padding-left: $l-gutter-body;
+  padding-right: $l-gutter-body;
+  // Clearfix
+  zoom: 1;
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+  [class*='l-col--'] {
+    float: left;
+    padding-left: $l-gutter-column;
+    padding-right: $l-gutter-column;
+    box-sizing: border-box; // If not using autoprefixer, add vendor prefixes here
+    min-height: 1px;
+    margin-right: 35px;
+    &.l-no-gutter {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  .no-mediaqueries & {
+    min-width: $breakpoint-no-mediaqueries;
+  }
+  &--centered {
+    text-align: center;
+    div[class*='l-col--'] {
+      float: none !important;
+      display:inline-block;
+      vertical-align:top;
+    }
+  }
+}
+
+// Col function, for use setting column widths in stylesheets instead of with inline classes
+@function col($columns){
+  @return $l-col-width * $columns;
+}
+
+// Classes for columns .col-1 through .col-12
+$i: 12;
+@for $i from 1 through $l-column-count {
+  .l-col--#{$i} {
+    width: calc(#{$l-col-width} * #{$i} - 35px);
+    @media (max-width: $breakpoint-mid) {
+      width: 100% !important;
+    }
+  }
+}
+// Add background colours to columns and container
+@mixin layout-test {
+  .l-container-wrapper {
+    background: rgba(black,0.15);
+  }
+  .l-container {
+    background: rgba(black,0.25);
+  }
+  [class*='l-col-'] {
+    background: rgba(black,0.35);
+  }
+}
