@@ -211,6 +211,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background: black;
     height: 734px;
     position: relative;
+    background-size: 100% 100%;
     &.servicios {
       background-image: url('img/static/5.Servicios_header_1440x438.png');
       background-size: 100% 100%;
@@ -274,6 +275,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     p {
       margin: 20px 40px;
       font-size: 16px;
+      @media (max-width: $breakpoint-mid) {
+        margin: 20px 30px;
+      }
     }
     h2 {
       margin: 20px;
@@ -284,12 +288,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       position: relative;
       text-align: center;
       margin-bottom: 40px;
+      @media (max-width: $breakpoint-mid) {
+        margin-bottom: 0px;
+        height: 230px;
+      }
     }
     img {
       width: 100%;
       position: absolute;
-      bottom: 0px;
+      top: 0px;
       left: 0px;
+      max-height: 233px;
     }
     background-color: #DCDCD2;
     color: $user-research-color;
@@ -319,8 +328,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       float: left;
       margin-top: 10px;
       bottom: -10px;
+      padding: 30px 20px!important;
+      span {
+        font-size: 40px;
+        img {
+          width: 80px;
+        }
+      }
       .l-col--3 {
-        width: calc(8.33333% * 5 - 15px)!important;
+        width: calc(8.33333% * 5 - 15px) !important;
+        padding-right: 0px;
+        margin-bottom: 23px;
       }
     }
 
@@ -331,11 +349,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     box-sizing: border-box;
     margin-top: -128px;
     position: relative;
+    @media (max-width: $breakpoint-mid) {
+      padding: 0px;
+      margin-top: 0px;
+
+    }
+
     .proyects {
       margin-top:200px;
       .proyects-image {
         padding-left: 0px!important;
         padding-right: 0px!important;
+        @media (max-width: $breakpoint-mid) {
+          width:95%!important;
+        }
         img {
           padding: 0px;
           margin: 0px;
@@ -349,6 +376,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           padding: 20px;
           color: #E5E5E5;
           margin-top: -5px;
+          @media (max-width: $breakpoint-mid) {
+            padding-bottom: 50px;
+          }
+
         }
       }
       .proyects-description {
@@ -358,11 +389,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         padding: 60px;
         margin-left: -35px;
         color: #fff;
-        margin-top: 308px;
+        margin-top: 83px;
         h2 {
           text-align: center;
           margin-bottom: 20px;
         }
+        @media (max-width: $breakpoint-mid) {
+          margin-right: 0px;
+          float: right;
+          width: 75% !important;
+          margin-top: -30px;
+          padding: 33px;
+          text-align: center;
+
+        }
+      }
+      @media (max-width: $breakpoint-mid) {
+        margin-top: 20px;
       }
     }
     .clients {
@@ -371,8 +414,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       height: 300px;
       width: 100%;
       float: left;
-      margin-top: -90px;
+      margin-top: 30px;
       margin-bottom:110px;
+      @media (max-width: $breakpoint-mid) {
+        margin-top: 20px;
+        
+      }
       .proyects-image {
         img {
           width: 100%;
@@ -380,7 +427,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       .proyects-description {
         margin-left: -35px;
-        background: #061DB2;
+        background: #000D65;
         box-sizing: border-box;
         padding: 60px;
         color: #fff;
@@ -391,6 +438,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           text-align: center;
           margin-bottom: 20px;
         }
+        @media (max-width: $breakpoint-mid) {
+          margin-top: -13px;
+          padding: 30px;
+          width: 84%!important;
+          left: 34%;
+          top: 195px;
+          text-align: center;
+          padding-bottom: 250px;
+        }
       }
     }
     .our-team {
@@ -399,6 +455,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       width: 100%;
       float: left;
       padding-bottom: 120px;
+      @media (max-width: $breakpoint-mid) {
+        margin-top: 10px;
+      }
       .our-team-image {
         img {
           width: 100%;
@@ -406,7 +465,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       .our-team-description {
         margin-left: -35px;
-        background: #000D65;
+        background: #1131FF;
         box-sizing: border-box;
         padding: 60px;
         color: #fff;
@@ -417,34 +476,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           text-align: center;
           margin-bottom: 20px;
         }
+        @media (max-width: $breakpoint-mid) {
+          margin-top: -65px;
+          padding: 90px 40px 40px;
+          left: 0px;
+          margin-left: 75px;
+          width: 88%!important;
+          position: relative;
+          z-index: -1;
+        }
+
       }
     }
     @media (max-width: $breakpoint-mid) {
-      width: 100% !important;
-      padding: 10px 20px !important;
-      margin-top: 0px !important;
-
-      * {
-        width: 100% !important;
-        position: relative!important;
-        height: auto!important;
-        margin-top: 0px!important;
-        margin-bottom: 0px!important;
-        margin-bottom: 0px!important;
-        margin-left: 0px!important;
-        * {
-          width: 100% !important;
-          position: relative!important;
-          margin: 0px!important;
-          left: 0px!important;
-          top: 0px!important;
-          margin-top: 0px!important;
-          margin-bottom: 0px!important;
-          img {
-            padding: 0px;            
-          }
-        }
-      }
       .proyects-image, .our-team-image {
         padding: 0px;
       }
@@ -801,7 +845,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         margin-bottom: 100px;
         .description {
           width: 50%;
-          margin-left: 32%;
+          margin-left: 37%;
+          zoom: .8;
+          padding: 30px;
+        }
+        img {
+          margin-left: -20px;
         }
       }
 
@@ -852,6 +901,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
     &.diseno-content {
       background-color: $content-design-color;
+    }
+    @media (max-width: $breakpoint-mid) {
+      width: calc(100% + 20px)!important;
+      margin-left: -10px;
+      margin-top: -55px;
     }
   }
   .proyecto-box {
@@ -924,7 +978,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     @media (max-width: $breakpoint-mid) {
       display: inline-block;
     }
-
   }
   .proyecto {
     .proyecto-header {
@@ -978,10 +1031,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       @media (max-width: $breakpoint-mid) {
         margin-top: 10px;
         h2 {
-          margin-bottom: 20px;
+          margin-bottom: 40px;
         }
         ul {
-          padding-top: 0px!important;
+          margin-top: 0px!important;
         }
       }
       ul {
@@ -1075,6 +1128,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           @media (max-width: $breakpoint-mid) {
             width: 65%;
             margin-left: 0px;
+            margin-top: -68px;
           }
         }
       }
@@ -1205,6 +1259,7 @@ footer {
   padding: 20px 0px 40px;
   color: #fff;
   margin-top: 30px;
+  overflow: hidden;
   small {
     display: inline-block;
     font-size: 12px;

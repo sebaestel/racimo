@@ -397,6 +397,7 @@ sub-header nav li:nth-last-child(1) {
   background: black;
   height: 734px;
   position: relative;
+  background-size: 100% 100%;
 }
 
 .jumbotron.servicios {
@@ -483,6 +484,12 @@ sub-header nav li:nth-last-child(1) {
   font-size: 16px;
 }
 
+@media (max-width: 820px) {
+  .services-box p {
+    margin: 20px 30px;
+  }
+}
+
 .services-box h2 {
   margin: 20px;
   text-align: center;
@@ -495,11 +502,19 @@ sub-header nav li:nth-last-child(1) {
   margin-bottom: 40px;
 }
 
+@media (max-width: 820px) {
+  .services-box figure {
+    margin-bottom: 0px;
+    height: 230px;
+  }
+}
+
 .services-box img {
   width: 100%;
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   left: 0px;
+  max-height: 233px;
 }
 
 .our-numbers {
@@ -531,9 +546,18 @@ sub-header nav li:nth-last-child(1) {
     float: left;
     margin-top: 10px;
     bottom: -10px;
+    padding: 30px 20px !important;
+  }
+  .our-numbers span {
+    font-size: 40px;
+  }
+  .our-numbers span img {
+    width: 80px;
   }
   .our-numbers .l-col--3 {
     width: calc(8.33333% * 5 - 15px) !important;
+    padding-right: 0px;
+    margin-bottom: 23px;
   }
 }
 
@@ -544,6 +568,13 @@ sub-header nav li:nth-last-child(1) {
   position: relative;
 }
 
+@media (max-width: 820px) {
+  .unorder-content {
+    padding: 0px;
+    margin-top: 0px;
+  }
+}
+
 .unorder-content .proyects {
   margin-top: 200px;
 }
@@ -551,6 +582,12 @@ sub-header nav li:nth-last-child(1) {
 .unorder-content .proyects .proyects-image {
   padding-left: 0px !important;
   padding-right: 0px !important;
+}
+
+@media (max-width: 820px) {
+  .unorder-content .proyects .proyects-image {
+    width: 95% !important;
+  }
 }
 
 .unorder-content .proyects .proyects-image img {
@@ -569,6 +606,12 @@ sub-header nav li:nth-last-child(1) {
   margin-top: -5px;
 }
 
+@media (max-width: 820px) {
+  .unorder-content .proyects .proyects-image .description {
+    padding-bottom: 50px;
+  }
+}
+
 .unorder-content .proyects .proyects-description {
   background: #061DB2;
   width: 33.2%;
@@ -576,12 +619,29 @@ sub-header nav li:nth-last-child(1) {
   padding: 60px;
   margin-left: -35px;
   color: #fff;
-  margin-top: 308px;
+  margin-top: 83px;
 }
 
 .unorder-content .proyects .proyects-description h2 {
   text-align: center;
   margin-bottom: 20px;
+}
+
+@media (max-width: 820px) {
+  .unorder-content .proyects .proyects-description {
+    margin-right: 0px;
+    float: right;
+    width: 75% !important;
+    margin-top: -30px;
+    padding: 33px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 820px) {
+  .unorder-content .proyects {
+    margin-top: 20px;
+  }
 }
 
 .unorder-content .clients {
@@ -590,8 +650,14 @@ sub-header nav li:nth-last-child(1) {
   height: 300px;
   width: 100%;
   float: left;
-  margin-top: -90px;
+  margin-top: 30px;
   margin-bottom: 110px;
+}
+
+@media (max-width: 820px) {
+  .unorder-content .clients {
+    margin-top: 20px;
+  }
 }
 
 .unorder-content .clients .proyects-image img {
@@ -600,7 +666,7 @@ sub-header nav li:nth-last-child(1) {
 
 .unorder-content .clients .proyects-description {
   margin-left: -35px;
-  background: #061DB2;
+  background: #000D65;
   box-sizing: border-box;
   padding: 60px;
   color: #fff;
@@ -614,6 +680,18 @@ sub-header nav li:nth-last-child(1) {
   margin-bottom: 20px;
 }
 
+@media (max-width: 820px) {
+  .unorder-content .clients .proyects-description {
+    margin-top: -13px;
+    padding: 30px;
+    width: 84% !important;
+    left: 34%;
+    top: 195px;
+    text-align: center;
+    padding-bottom: 250px;
+  }
+}
+
 .unorder-content .our-team {
   margin-left: -8.3%;
   position: relative;
@@ -622,13 +700,19 @@ sub-header nav li:nth-last-child(1) {
   padding-bottom: 120px;
 }
 
+@media (max-width: 820px) {
+  .unorder-content .our-team {
+    margin-top: 10px;
+  }
+}
+
 .unorder-content .our-team .our-team-image img {
   width: 100%;
 }
 
 .unorder-content .our-team .our-team-description {
   margin-left: -35px;
-  background: #000D65;
+  background: #1131FF;
   box-sizing: border-box;
   padding: 60px;
   color: #fff;
@@ -643,32 +727,18 @@ sub-header nav li:nth-last-child(1) {
 }
 
 @media (max-width: 820px) {
-  .unorder-content {
-    width: 100% !important;
-    padding: 10px 20px !important;
-    margin-top: 0px !important;
+  .unorder-content .our-team .our-team-description {
+    margin-top: -65px;
+    padding: 90px 40px 40px;
+    left: 0px;
+    margin-left: 75px;
+    width: 88% !important;
+    position: relative;
+    z-index: -1;
   }
-  .unorder-content * {
-    width: 100% !important;
-    position: relative !important;
-    height: auto !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    margin-bottom: 0px !important;
-    margin-left: 0px !important;
-  }
-  .unorder-content * * {
-    width: 100% !important;
-    position: relative !important;
-    margin: 0px !important;
-    left: 0px !important;
-    top: 0px !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  .unorder-content * * img {
-    padding: 0px;
-  }
+}
+
+@media (max-width: 820px) {
   .unorder-content .proyects-image, .unorder-content .our-team-image {
     padding: 0px;
   }
@@ -1042,7 +1112,12 @@ sub-header nav li:nth-last-child(1) {
   }
   .proyectos-content .star .description {
     width: 50%;
-    margin-left: 32%;
+    margin-left: 37%;
+    zoom: .8;
+    padding: 30px;
+  }
+  .proyectos-content .star img {
+    margin-left: -20px;
   }
 }
 
@@ -1103,6 +1178,14 @@ sub-header nav li:nth-last-child(1) {
 
 .indicators.diseno-content {
   background-color: #EE6B7B;
+}
+
+@media (max-width: 820px) {
+  .indicators {
+    width: calc(100% + 20px) !important;
+    margin-left: -10px;
+    margin-top: -55px;
+  }
 }
 
 .proyecto-box {
@@ -1261,10 +1344,10 @@ sub-header nav li:nth-last-child(1) {
     margin-top: 10px;
   }
   .proyecto .resultados h2 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .proyecto .resultados ul {
-    padding-top: 0px !important;
+    margin-top: 0px !important;
   }
 }
 
@@ -1370,6 +1453,7 @@ sub-header nav li:nth-last-child(1) {
   .proyecto .project-content-detail figure .text {
     width: 65%;
     margin-left: 0px;
+    margin-top: -68px;
   }
 }
 
@@ -1505,6 +1589,7 @@ footer {
   padding: 20px 0px 40px;
   color: #fff;
   margin-top: 30px;
+  overflow: hidden;
 }
 
 footer small {
