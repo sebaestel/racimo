@@ -342,8 +342,14 @@ header.small nav ul li a, sub-header.small nav ul li a {
   header .logo .extended-logo, sub-header .logo .extended-logo {
     display: none;
   }
+  header nav, sub-header nav {
+    float: left;
+    margin-left: 25px;
+  }
   header nav ul li a, sub-header nav ul li a {
     color: #000;
+    padding: 9px;
+    font-size: 14px;
   }
   header nav ul li:nth-last-child(1), sub-header nav ul li:nth-last-child(1) {
     display: none;
@@ -365,6 +371,15 @@ sub-header {
 sub-header nav {
   float: left;
   text-align: left;
+  margin-left: 0px;
+}
+
+sub-header nav li {
+  font-size: 14px;
+}
+
+sub-header nav li a {
+  padding: 9px !important;
 }
 
 sub-header nav li:nth-last-child(1) {
