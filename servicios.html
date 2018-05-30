@@ -37,6 +37,43 @@
     <div class="jumbotron servicios">
     </div>
     <div class="l-container general-content servicios">
+        <div style="margin-bottom: 100px;">
+            <div class="l-col--3">
+                <h1>Servicios</h1>
+            </div>
+            <div class="l-col--9">
+                <p>SerLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation vicios</p>
+            </div>            
+        </div>
+
+        <div class="services-box-mobile l-col--12 desktop" >
+            <div class="item">
+                <article class="services-box l-col--4 services">
+                <figure>
+                    <img src="img/people-box.png">
+                </figure>
+                <p>Estudios etnográficos que levantan información en contexto para que que tomes decisiones estratégicas desde y para las personas.</p>
+                </article>   
+            </div>
+            <div class="item">
+                <article class="services-box l-col--4 product-design">
+                    <figure>
+                        <img src="img/arc1.png">       
+                    </figure>
+                    <p>Diseño de productos y servicios en sintonía con la propuesta de valor de tu organización.</p>
+                </article>
+            </div>
+            <div class="item">
+                <article class="services-box l-col--4 content-design">
+                    <figure>
+                        <img src="img/brain.png"> 
+                    </figure>
+                    <p>Contenidos que construyen experiencias narrativas únicas para marcas y organizaciones.</p>
+                </article>
+            </div>
+        </div>
+
+
         <ul class="list-of-services">
             <li class="l-col--3" data-target="investigation">
                 <a href="#" class="active investigation">Investigacion de usuario</a>
@@ -48,8 +85,9 @@
                 <a href="#" class="diseno-content">Diseño de contenidos</a>
             </li>
         </ul>
-        <section id="investigation" class="service">
-            <div class="l-col--12 first-content investigacion">
+
+        <section id="investigation" class="service" style="display: block;">
+            <div class="l-col--12 first-content investigacion desktop">
                 <img src="img/static/5.1 Servicios_investigación_543x427.png" class="l-col--5"/>
                 <article class="l-col--6">
                     <h2>Investigación de Usuarios</h2>
@@ -163,7 +201,7 @@
         </section>
 
         <section id="diseno-product" class="service">
-            <div class="l-col--12 first-content diseno-product">
+            <div class="l-col--12 first-content diseno-product desktop">
                 <img src="img/static/5.2 Servicios_diseño_520x409.png" class="l-col--5"/>
                 <article class="l-col--6">
                     <h2>Diseño de productos y servicios</h2>
@@ -234,7 +272,7 @@
         </section>
 
         <section id="diseno-content" class="service">
-            <div class="l-col--12 first-content diseno-content">
+            <div class="l-col--12 first-content diseno-content desktop">
                 <img src="img/static/pink.png" class="l-col--5"/>
                 <article class="l-col--6">
                     <h2>Diseño de productos y servicios</h2>
@@ -378,8 +416,38 @@
   <script
   src="global.js"
   crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    
+
   <script>
       $(document).ready(function() {
+
+        $('.services-box-mobile').slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        $('.services-box-mobile').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+            var target = $(this).attr('data-target');
+            var scrollPos = $(document).scrollTop();
+            var position = ['investigation', 'diseno-product', 'diseno-content'];
+
+            $('.service').hide();
+            $('#'+position[nextSlide]).show();
+            $('.tooltip').hide()
+            $(document).scrollTop(scrollPos);
+            $('.list-of-services li a').removeClass('active') 
+            $('.list-of-services [data-target="'+position[nextSlide]+'"] a').addClass('active')
+
+
+
+        });
+
         $('.tools a').click(function(){
             $('.tooltip').hide()
             $('.tooltip', this).show()
