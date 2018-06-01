@@ -23,6 +23,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     line-height: 1; 
     background: #E5E5E5;
     font-family: 'Work Sans', sans-serif;
+    @media (max-width: $breakpoint-mid) {
+      background: #fff;
+      overflow-x: hidden;
+    }
   }
   .block {
     width: 100%;
@@ -109,7 +113,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
             transition: .2s linear border;
             border-bottom: 1px solid rgba(255, 255, 255, .0);
             &:hover {
-              border-bottom: 1px solid rgba(255, 255, 255, .2);
+              font-weight: bold;
+              border-bottom: 2px solid rgba(255, 255, 255, .3);
             }
           }
         }
@@ -230,13 +235,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   .general-content {
     background: #fff;
-    margin-top: -145px;
+    margin-top: -150px;
     padding: 60px 90px;
     box-sizing: border-box;
     box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
     position: relative;
     &.home {
-      padding-bottom: 210px;
+      padding-bottom: 185px;
       .bajada {
         p{
           font-size: 16px;
@@ -245,11 +250,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       @media (max-width: $breakpoint-mid) {
         padding-bottom: 20px;
-        overflow: hidden;
+        margin-left: 24px;        
+        width: calc(100% - 40px);
+    
       }
     }
     @media (max-width: $breakpoint-mid) {
       padding: 20px 10px;
+      box-shadow: 0 0 5px 1px rgba(0,0,0,0);
     }
     &.servicios {
       margin-bottom: 60px;
@@ -309,7 +317,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background-color: #000D65;
     color: #fff;
     position: absolute;
-    bottom: -100px;
+    bottom: -134px;
     width: calc(100% - 215px);
     margin-top: 31px;
     h2 {
@@ -321,14 +329,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       width: 100%;
       float: left;
       margin-bottom: 10px;
+      font-weight: bolder;
+
     }
     @media (max-width: $breakpoint-mid) {
       position: relative;
-      width: 100%;
+      width: calc(106% + 40px) !important;
       float: left;
       margin-top: 10px;
       bottom: -10px;
-      padding: 30px 20px!important;
+      padding: 30px 20px !important;
+      margin-left: -29px;
       span {
         font-size: 40px;
         img {
@@ -347,7 +358,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .unorder-content{
     padding: 60px 0px 60px 90px;
     box-sizing: border-box;
-    margin-top: -128px;
+    margin-top: -85px;
     position: relative;
     @media (max-width: $breakpoint-mid) {
       padding: 0px;
@@ -373,7 +384,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           width: 100%;
           box-sizing: border-box;
           background-color: #000;
-          padding: 20px;
+          padding: 35px;
           color: #E5E5E5;
           margin-top: -5px;
           @media (max-width: $breakpoint-mid) {
@@ -390,9 +401,29 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         margin-left: -35px;
         color: #fff;
         margin-top: 83px;
+        height: 293px;
+        position: relative;
+        p{
+          font-size: 18px;
+        }
         h2 {
           text-align: center;
           margin-bottom: 20px;
+        }
+        .label{
+          padding: 7px 30px;
+          font-size: 14px;
+          background: #fff;
+          color: #000;
+          display: inline-block;
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          position: absolute;
+          left: -65px;
+          top: 150px;
         }
         @media (max-width: $breakpoint-mid) {
           margin-right: 0px;
@@ -401,7 +432,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           margin-top: -30px;
           padding: 33px;
           text-align: center;
-
         }
       }
       @media (max-width: $breakpoint-mid) {
@@ -421,22 +451,45 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         
       }
       .proyects-image {
+        height: 374px;
+        overflow: hidden;
         img {
           width: 100%;
         }      
       }
       .proyects-description {
         margin-left: -35px;
-        background: #000D65;
+        background: #1131FF;
         box-sizing: border-box;
-        padding: 60px;
+        padding: 90px;
         color: #fff;
         bottom: -74px;
         position: absolute;
         left: 57.4%;
+        height: 404px;
+
         h2 {
           text-align: center;
           margin-bottom: 20px;
+        }
+        p {
+          font-size: 18px;
+        }
+
+        .label{
+          padding: 7px 30px;
+          font-size: 14px;
+          background: #fff;
+          color: #000;
+          display: inline-block;
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          position: absolute;
+          left: -64px;
+          bottom: 120px;
         }
         @media (max-width: $breakpoint-mid) {
           margin-top: -13px;
@@ -454,7 +507,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       position: relative;
       width: 100%;
       float: left;
-      padding-bottom: 120px;
       @media (max-width: $breakpoint-mid) {
         margin-top: 10px;
       }
@@ -465,7 +517,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       .our-team-description {
         margin-left: -35px;
-        background: #1131FF;
+        background: #000D65;
         box-sizing: border-box;
         padding: 60px;
         color: #fff;
@@ -476,6 +528,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           text-align: center;
           margin-bottom: 20px;
         }
+        .label{
+          padding: 7px 30px;
+          font-size: 14px;
+          background: #fff;
+          color: #000;
+          display: inline-block;
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          position: absolute;
+          left: -70px;
+          top: 134px;
+        }
+
         @media (max-width: $breakpoint-mid) {
           margin-top: -65px;
           padding: 90px 40px 40px;
@@ -523,14 +591,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         &.active {
           color: $user-research-color;
           border-bottom: 1px solid $user-research-color;
-          &.diseno-content{
-            color: $content-design-color;
-            border-bottom: 1px solid $content-design-color;
-          }
-          &.diseno-product  {
-            color: $product-design-color;
-            border-bottom: 1px solid $product-design-color;
-          }
         }
       }
 
@@ -547,12 +607,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       } 
     }
     .first-content {
-      margin-top: 80px;
+      margin-top: 50px;
       width: calc(100% + 180px);
       margin-left: -90px;
       background-size: 100%;
       position: relative;
       padding-bottom: 30px;
+      height: 395px;
       img {
         display: inline-block;
         position: absolute;
@@ -577,40 +638,49 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         }
       }
       &.investigacion {
-        background-image: url('img/background-blue-services.png');
+        background-color: #DCDCD2;
+        h2, p {
+          color: $user-research-color;
+        }
         img {
           margin-left: 30px;
           margin-top: -40px;
         }
         article {
           a {
-            color: $user-research-color;
+            background-color: $user-research-color;
+            color: #fff;
           }
         }
       }
       &.diseno-product {
-        background-image: url('img/background-green-services.png');
+        background-color: #000D65; 
         img {
           margin-left: 30px;
           margin-top: -40px;
+          width: 450px;
         }
         article {
           a {
-            color: $product-design-color;
+            color: #000D65;
           }
         }
       }
       &.diseno-content {
-        background-image: url('img/background-pink-services.png');
+        background-color: #C5A459;
         img {
           margin-left: 150px;
           margin-top: -40px;
           height: auto;
           width: auto;
         }
+        h2, p {
+          color: #061DB2;
+        }
         article {
           a {
-            color: $content-design-color;
+            color: #fff;
+            background: #061DB2;
           }
         }       
       }
@@ -679,11 +749,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           li {
             a {
               .tooltip {
-                background:$user-research-color;
-                color: #fff;
+                background: #DCDCD2;
+                color: #000D65;
                 display:none;
                 &:after {
-                  border-right-color:$user-research-color;
+                  border-right-color: #DCDCD2;
                 }
               }
               &:hover {
@@ -696,12 +766,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       &.diseno-product {
         h3 {
-          color:  $product-design-color;
+          color: $user-research-color;
         }
         ul.with-us {
           li {
             span {
-              color:  $product-design-color;
+              color: $user-research-color;
             }
           }
         }
@@ -726,12 +796,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       &.diseno-content {
         h3 {
-          color:  $content-design-color;
+          color: $user-research-color;
         }
         ul.with-us {
           li {
             span {
-              color:  $content-design-color;
+              color: $user-research-color;
             }
           }
         }
@@ -768,12 +838,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       &.diseno-product {
         h3 {
-          color: $product-design-color;
+          color: $user-research-color;
         }
       }
       &.diseno-content {
         h3 {
-          color: $content-design-color;
+          color: $user-research-color;
         }
       }
     }
@@ -787,7 +857,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         color: #9B9B9B;
         margin-right: 20px;
         transition: .2s linear all;
-        font-size: 15px;
+        font-size: 17px;
         cursor: pointer;
         &:hover {
           color: #000;
@@ -878,6 +948,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin-bottom: -30px;
     position: relative;
     bottom: -63px;
+    background-color: $user-research-color;
     .prev {
       float:left;
       margin-left: 20px;
@@ -898,13 +969,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
     }
     &.investigation {
-      background-color: $user-research-color;
+      background-color: #DCDCD2;
     }
     &.diseno-product {
-      background-color: $product-design-color;
+      background-color: #000D65
     }
     &.diseno-content {
-      background-color: $content-design-color;
+      background-color: #C5A459;
     }
     @media (max-width: $breakpoint-mid) {
       width: calc(100% + 20px)!important;
@@ -964,10 +1035,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         color: $user-research-color;
       }
       &.diseno-product {
-        color: $product-design-color;
+        color: $user-research-color;
       }
       &.diseno-content {
-        color: $content-design-color;
+        color: $user-research-color;
       }
     }
   }
@@ -1007,6 +1078,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           list-style: disc;
           list-style-position: inside;
           margin-top: 10px;
+          line-height: 25px;
         }
         @media (max-width: $breakpoint-mid) {
           padding-left: 10px;
@@ -1032,6 +1104,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       padding: 40px;
       background-color: #E5E5E5;
       box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+      width: calc(8.33333% * 12 - 0px);
       @media (max-width: $breakpoint-mid) {
         margin-top: 10px;
         h2 {
@@ -1044,9 +1117,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       ul {
         margin-top: 40px;
         padding-left: 25px;
+        line-height: 25px;
         li {
           margin-bottom: 25px;
           position: relative;
+          line-height: 20px;
           span {
             position: absolute;
             left: -20px;
